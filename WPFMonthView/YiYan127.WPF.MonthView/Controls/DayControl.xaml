@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="YiYan127.WPF.MonthView.Controls.DayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             MinWidth="100"
+             MinHeight="100"
+             BorderBrush="LightSlateGray"
+             BorderThickness="0.5,0.5,1.5,1.5">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="DefaultBrush" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0" Color="#FFFFFFFF" />
+                <GradientStop Offset="0.987" Color="#FFC4DDFF" />
+                <GradientStop Offset="0.535" Color="#FFDEECFF" />
+            </LinearGradientBrush>
+
+            <!--  当天的样式  -->
+            <LinearGradientBrush x:Key="TodayBrush" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0" Color="#FFFFFFDC" />
+                <GradientStop Offset="0.525" Color="#FFFADC96" />
+                <GradientStop Offset="0.732" Color="#FFF9D07D" />
+                <GradientStop Offset="1" Color="#FFF7BE57" />
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border x:Name="BdrDayLabel"
+                Grid.Row="0"
+                Background="{DynamicResource DefaultBrush}"
+                BorderBrush="{x:Null}"
+                CornerRadius="2">
+            <Label x:Name="LblDayNumber"
+                   Content="1"
+                   FontFamily="Arial"
+                   FontWeight="Bold" />
+        </Border>
+        <StackPanel x:Name="SplDateTimeEvents"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="White" />
+    </Grid>
+</UserControl>

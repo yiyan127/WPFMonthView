@@ -1,0 +1,4 @@
+*.suo
+*.bak
+/MonthView/*/bin/
+/MonthView/*/obj/
