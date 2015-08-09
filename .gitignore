@@ -1,4 +1,4 @@
 *.suo
 *.bak
-/MonthView/*/bin/
-/MonthView/*/obj/
+WPFMonthView/*/bin/
+WPFMonthView/*/obj/
